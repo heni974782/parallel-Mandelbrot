@@ -3,7 +3,7 @@ import numpy as np # perform arrays operations at the speed of compiled language
 import taichi as ti # JIT compiler
 
 # settings
-res = width, height = 800, 450 # with modern video card with CUDA support - increase res '1600, 900' and set 'ti.init(arch=ti.cuda)'
+res = width, height = 800, 450 # increase res '1600, 900' and set 'ti.init(arch=ti.cuda)'
 offset = np.array([1.3 * width, height]) // 2 # offset array to move the coordinate axes to the center of the fractal
 
 # gradiant texture
