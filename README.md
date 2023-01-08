@@ -1,8 +1,46 @@
 # parallel-Mandelbrot
 Virtualisation
+Cette application permet d'afficher l'ensemble de Mandelbrot en utilisant Python, Taichi, numpy et Pygame.
+
+Interface de l'utilisateur:
+
+la fonction controle permet que l'utilisateur d'intéragir avec le serveur : 
+
+flèche -> : augmenter le nombre d'itération max 
+
+flèche <- : diminuer le nombre d'itération max
+
+z : translation vers le haut
+
+s : translation vers le bas 
+
+q : translation vers la gauche 
+
+d : translation vers la droite 
 
 
-Technique de parallélisation automatique
+les packages utlisiées:
+
+Taichi : est un langage spécifique à un domaine intégré à Python qui vous aide à écrire facilement des programmes parallèles performants.
+
+Pygame : est une bibliothèque multiplateforme gratuite et open source pour le développement d'applications multimédias telles que des jeux vidéo utilisant Python. Il utilise la bibliothèque Simple DirectMedia Layer et plusieurs autres bibliothèques populaires pour résumer les fonctions les plus courantes, ce qui rend l'écriture de ces programmes plus intuitive. Dans ce projet, ça permet de fournir une interface graphique.
+
+Numpy : est une bibliothèque pour le langage de programmation Python, ajoutant la prise en charge de grands tableaux et matrices multidimensionnels, ainsi qu'une grande collection de fonctions mathématiques de haut niveau pour opérer sur ces tableaux.
+
+
+Taichi computing:
+
+Concu pour exploiter le parallélisme (automatique/manuelle) dans les GPU et les processeurs multicœurs CPU.
+
+Complier en Just In Time  Compiler (JIT) en binary executable kernels.
+
+Prend en charge plusieurs backends, y compris les processeurs x64 et ARM, CUDA, Vulkan, Metal et OpenGL Compute Shaders ;
+
+
+
+
+
+Technique de parallélisation automatique (déployé dans ce projet): 
 
 1-Parse
 
