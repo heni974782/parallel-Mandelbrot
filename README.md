@@ -61,4 +61,6 @@ Le planificateur générera une liste de toutes les tâches et les détails des 
 
 Il est imporant de préciser que il y'a 2 grandes méthodes dans la parallélisation automatique, multi-threading en pipeline et Multi-threading cyclique. Par exemple, considérons une boucle qui, à chaque itération, applique une centaine d'opérations et s'exécute pendant mille itérations. Cela peut être considéré comme une grille de 100 colonnes sur 1 000 lignes, soit un total de 100 000 opérations. Le multithreading cyclique affecte chaque ligne à un thread différent. Le multi-threading pipeline affecte chaque colonne à un thread différent.
 
+le Multi-threading cyclique est déployé dans ce projet vu que la suite de Mandelbrote est dépendante de l'expression précédante or que l'ensemble des points complexes C sont indépendants.
+
 
