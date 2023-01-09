@@ -40,7 +40,7 @@ Prend en charge plusieurs backends, y compris les processeurs x64 et ARM, CUDA, 
 
 
 
-Technique de parallélisation automatique (déployé dans ce projet): 
+Technique de parallélisation automatique : 
 
 1-Parse
 
@@ -57,3 +57,8 @@ Le planificateur listera toutes les tâches et leurs dépendances les unes par r
 4-Génération de codes
 
 Le planificateur générera une liste de toutes les tâches et les détails des cœurs sur lesquels elles s'exécuteront, ainsi que la durée pendant laquelle elles s'exécuteront. Le générateur de code insérera des constructions spéciales dans le code qui seront lues lors de l'exécution par le planificateur. Ces constructions indiqueront au planificateur sur quel noyau une tâche particulière sera exécutée avec les heures de début et de fin.
+
+
+Il est imporant de préciser que il y'a 2 grandes méthodes dans la parallélisation automatique, multi-threading en pipeline et Multi-threading cyclique. Par exemple, considérons une boucle qui, à chaque itération, applique une centaine d'opérations et s'exécute pendant mille itérations. Cela peut être considéré comme une grille de 100 colonnes sur 1 000 lignes, soit un total de 100 000 opérations. Le multithreading cyclique affecte chaque ligne à un thread différent. Le multi-threading pipeline affecte chaque colonne à un thread différent.
+
+
